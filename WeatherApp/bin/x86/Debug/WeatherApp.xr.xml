@@ -29,6 +29,15 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
@@ -56,15 +65,10 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Source" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="FontWeight" />
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
-    <RootType FullName="WeatherApp.MainPage" />
+    <RootType FullName="WeatherApp.Pages.CityHistoryPage" />
+    <RootType FullName="WeatherApp.Pages.MainPage" />
   </Roots.RootTypes>
 </Roots>
