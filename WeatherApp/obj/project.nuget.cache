@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b5spyxYIK2m5rSTb7O1VeaackZEdSGAUEyDHyG91jLTeXNoTk4JS4J8Z5OoMaE7yOJ0Gx9eg9R/5eNsbd7qcVQ==",
+  "dgSpecHash": "A5BjUlQStCwO6G0rooH9b2Mxw0a3CDYryBTp2lXAXyLg6C+Fow9DVuNYv6QHeITo8NaYNqiAptpcaTQi4JAaeA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Test\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.13\\microsoft.net.uwpcoreruntimesdk.2.2.13.nupkg.sha512",
     "C:\\Users\\Mohamed Agamy\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.universalwindowsplatform\\6.2.13\\microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",
+    "C:\\Users\\Mohamed Agamy\\.nuget\\packages\\microsoft.xaml.behaviors.uwp.managed\\2.0.1\\microsoft.xaml.behaviors.uwp.managed.2.0.1.nupkg.sha512",
     "C:\\Users\\Mohamed Agamy\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
     "C:\\Users\\Mohamed Agamy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.2.13\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using WeatherApp.Helper;
 using WeatherApp.IServices;
 using WeatherApp.Models;
 
@@ -82,9 +84,29 @@ namespace WeatherApp.Services
         {
             return Task.FromResult(weathers.Where(d => d.City == city).ToList());
         }
-        public Task<Weather> GetCurrent(string city)
+        public async Task<Weather> GetCurrent(string city)
         {
-            return Task.FromResult(weathers.OrderByDescending(d => d.Date).FirstOrDefault(d => d.City == city));
+
+            using (var httpClient = new HttpClient())
+            {
+                try
+                {
+                    string x = $"{ConstString.URLCurrentWeather}q={city}&appid={ConstString.apiKey}";
+                    HttpResponseMessage response = await httpClient.GetAsync($"{ConstString.URLCurrentWeather}q={city}&appid={ConstString.apiKey}");
+                    HttpContent content = response.Content;
+                    var data = await content.ReadAsStringAsync();
+                }
+                catch (Exception ex)
+                {
+          
+                    throw;
+                }
+                
+                return weathers.OrderByDescending(d => d.Date).FirstOrDefault(d => d.City == city);
+            }
+
+
+            //return Task.FromResult(weathers.OrderByDescending(d => d.Date).FirstOrDefault(d => d.City == city));
         }
     }
 }

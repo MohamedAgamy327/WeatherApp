@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
+using System.Threading.Tasks;
 using WeatherApp.IServices;
 using WeatherApp.Models;
 
@@ -18,9 +19,12 @@ namespace WeatherApp.ViewModels
             _navigationService = navigationService;
             _weatherService = weatherService;
 
-            var task = _weatherService.GetCurrent(App.City);
-            task.Wait();
-            _currentWeather = task.Result;
+
+      //      _currentWeather  = await _weatherService.GetCurrent(id).ConfigureAwait(true);
+
+            //var task = _weatherService.GetCurrent(App.City);
+            //task.Wait();
+            //_currentWeather = task.Result;
         }
 
         private Weather _currentWeather;
@@ -42,6 +46,21 @@ namespace WeatherApp.ViewModels
         private void NavigateToMainViewMethod()
         {
             _navigationService.GoBack();
+        }
+
+       
+        private RelayCommand _load;
+        public RelayCommand Load
+        {
+            get
+            {
+                return _load
+                    ?? (_load = new RelayCommand(ExecuteLoadAsync));
+            }
+        }
+        private async void ExecuteLoadAsync()
+        {
+        CurrentWeather = await _weatherService.GetCurrent(App.City).ConfigureAwait(true);
         }
 
     }

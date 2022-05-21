@@ -6,15 +6,18 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="AddCity" />
     <RootPropertyPathName Name="CityDetails" />
+    <RootPropertyPathName Name="Load" />
     <RootPropertyPathName Name="CurrentWeather" />
     <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="City" />
+    <RootPropertyPathName Name="Windspeed" />
+    <RootPropertyPathName Name="Humidity" />
+    <RootPropertyPathName Name="Temperature" />
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Country" />
     <RootPropertyPathName Name="NavigateToMainView" />
     <RootPropertyPathName Name="CityHistory" />
     <RootPropertyPathName Name="Weathers" />
-    <RootPropertyPathName Name="Temperature" />
     <RootPropertyPathName Name="SelectedCity" />
     <RootPropertyPathName Name="Main" />
     <RootPropertyPathName Name="Cities" />
@@ -68,6 +71,17 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="WeatherApp.Pages.AddCityPage" />
+    <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
+      <RootMethod Name="GetBehaviors" />
+      <RootMethod Name="SetBehaviors" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.EventTriggerBehavior">
+      <RootProperty Name="EventName" />
+      <RootProperty Name="Actions" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.InvokeCommandAction">
+      <RootProperty Name="Command" />
+    </RootType>
     <RootType FullName="WeatherApp.Helper.StringFormatConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />

@@ -30,17 +30,25 @@
     <AppXManifest Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-21T18:48:07.782</Modified>
+      <Modified>2022-05-21T21:40:39.575</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\WeatherApp.exe">
       <PackagePath>entrypoint\WeatherApp.exe</PackagePath>
-      <Modified>2022-05-21T18:48:07.345</Modified>
+      <Modified>2022-05-21T21:40:38.793</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mohamed Agamy\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
       <Modified>2018-01-03T12:27:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mohamed Agamy\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.1\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+      <Modified>2019-04-27T01:06:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mohamed Agamy\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.1\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+      <Modified>2019-04-27T01:06:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mohamed Agamy\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Extras.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
@@ -142,27 +150,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\WeatherApp.xr.xml">
       <PackagePath>WeatherApp.xr.xml</PackagePath>
-      <Modified>2022-05-21T18:48:07.259</Modified>
+      <Modified>2022-05-21T19:35:31.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-21T18:48:07.269</Modified>
+      <Modified>2022-05-21T21:40:38.705</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\AddCityPage.xbf">
       <PackagePath>Pages\AddCityPage.xbf</PackagePath>
-      <Modified>2022-05-21T18:48:07.269</Modified>
+      <Modified>2022-05-21T21:40:38.705</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\CityDetailsPage.xbf">
       <PackagePath>Pages\CityDetailsPage.xbf</PackagePath>
-      <Modified>2022-05-21T18:48:07.269</Modified>
+      <Modified>2022-05-21T21:40:38.701</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\CityHistoryPage.xbf">
       <PackagePath>Pages\CityHistoryPage.xbf</PackagePath>
-      <Modified>2022-05-21T18:48:07.269</Modified>
+      <Modified>2022-05-21T21:40:38.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\MainPage.xbf">
       <PackagePath>Pages\MainPage.xbf</PackagePath>
-      <Modified>2022-05-21T18:48:07.270</Modified>
+      <Modified>2022-05-21T21:40:38.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -170,11 +178,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-21T18:03:23.489</Modified>
+      <Modified>2022-05-21T19:35:32.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Core\WeatherApp.exe">
       <PackagePath>WeatherApp.exe</PackagePath>
-      <Modified>2022-05-21T18:48:07.777</Modified>
+      <Modified>2022-05-21T21:40:39.562</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
