@@ -48,3 +48,11 @@ D:\Projects\Test\WeatherApp\WeatherApp\obj\x86\Debug\Pages\CityHistoryPage.g.i.c
 D:\Projects\Test\WeatherApp\WeatherApp\obj\x86\Debug\Pages\CityHistoryPage.g.cs
 D:\Projects\Test\WeatherApp\WeatherApp\obj\x86\Debug\Pages\CityHistoryPage.xaml
 D:\Projects\Test\WeatherApp\WeatherApp\obj\x86\Debug\Pages\CityHistoryPage.xbf
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\CommonServiceLocator.dll
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\GalaSoft.MvvmLight.Extras.dll
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\GalaSoft.MvvmLight.Extras.pdb
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\GalaSoft.MvvmLight.Platform.dll
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\GalaSoft.MvvmLight.Platform.pdb
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\GalaSoft.MvvmLight.dll
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\GalaSoft.MvvmLight.pdb
+D:\Projects\Test\WeatherApp\WeatherApp\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml

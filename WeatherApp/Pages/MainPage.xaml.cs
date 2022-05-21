@@ -34,10 +34,10 @@ namespace WeatherApp.Pages
             CitiesListView.ItemsSource = cities;
         }
 
-        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(CityHistoryPage), e.OriginalSource as Frame);
-        }
+        //private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        //{
+        //    Frame.Navigate(typeof(CityHistoryPage), e.OriginalSource as Frame);
+        //}
     }
 
 }

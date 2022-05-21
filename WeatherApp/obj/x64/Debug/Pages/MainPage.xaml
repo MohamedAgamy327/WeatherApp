@@ -1,0 +1,104 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="WeatherApp.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+     DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=Main}"
+    x:Name="viewName">
+
+    <Grid    Background="#E5E5E5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="3"   Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="14" Text="{Binding SelectedFeedItem}"/>
+
+
+        <Button Command="{Binding NavigateToView}" CommandParameter="History" Background="#FFFFFF"  Margin="0,20,30,0" HorizontalAlignment="Right" Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Image  Height="16" Source="../Assets/Icon_Plus.png" Margin="0,0,10,0"/>
+                <TextBlock    Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="14" Text="Add City"/>
+            </StackPanel>
+        </Button>
+
+        <TextBlock Grid.Row="1" Margin="20,0,0,0"   Foreground="#000000"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Regular"
+                                FontSize="44" Text="Cities"/>
+
+
+        <StackPanel 
+            Grid.Row="2"
+        Orientation="Vertical" 
+        >
+        <ListView x:ConnectionId='2' 
+            x:Name="CitiesListView" 
+            
+            >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="9*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+
+
+                    
+                        <StackPanel 
+                            Orientation="Horizontal" Grid.Column="0">
+                            <TextBlock
+                                Text="{Binding Name}"
+                                Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
+                                />
+                            <TextBlock
+                                Text=","
+                                   Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
+                                />
+                                <TextBlock
+                                Text="{Binding Country}"
+                                    Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
+                                />
+
+                            </StackPanel>
+                            <Button  Command="{Binding Path=DataContext.NavigateToView ,  ElementName=CitiesListView}" CommandParameter="History"  Background="#E5E5E5" Grid.Column="1">
+                            <Image    HorizontalAlignment="Left"  Height="20" Source="../Assets/Icon_Chevron.png"/>
+                            </Button>
+                        </Grid>
+
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+    </Grid>
+</Page>
+

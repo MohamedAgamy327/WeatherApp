@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="WeatherApp.Pages.CityHistoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+        DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=CityHistory}">
+
+    <Grid    Background="#E5E5E5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button  Background="#E5E5E5" Grid.Column="1">
+                <Image    HorizontalAlignment="Left"  Height="20" Source="../Assets/Icon_Chevron.png"/>
+            </Button>
+            <TextBlock  Margin="20,0,0,0"   Foreground="#000000"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Regular"
+                                FontSize="44" Text="London"/>
+            <TextBlock  Margin="20,0,0,0"   Foreground="#000000"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Regular"
+                                FontSize="44" Text="historical"/>
+        </StackPanel>
+ 
+
+
+        <StackPanel 
+            Grid.Row="1"
+        Orientation="Vertical" 
+        >
+        <ListView x:ConnectionId='2' 
+            x:Name="CitiesListView" 
+            
+            >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="9*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+
+
+                    
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
+                            <TextBlock
+                                Text="{Binding Name}"
+                                Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
+                                />
+                            <TextBlock
+                                Text=","
+                                   Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
+                                />
+                                <TextBlock
+                                Text="{Binding Country}"
+                                    Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
+                                />
+
+                            </StackPanel>
+
+                            <Image  Grid.Column="1" HorizontalAlignment="Left"  Height="20" Source="../Assets/Icon_Chevron.png"/>
+
+                        </Grid>
+
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+    </Grid>
+</Page>
+
