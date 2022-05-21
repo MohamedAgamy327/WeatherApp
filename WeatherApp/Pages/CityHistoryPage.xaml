@@ -17,7 +17,7 @@
 
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Button Click="Button_Click" Background="#E5E5E5" Grid.Column="1">
+            <Button  Background="#E5E5E5" Grid.Column="1">
                 <Image    HorizontalAlignment="Left"  Height="20" Source="../Assets/Icon_Chevron.png"/>
             </Button>
             <TextBlock  Margin="20,0,0,0"   Foreground="#000000"         

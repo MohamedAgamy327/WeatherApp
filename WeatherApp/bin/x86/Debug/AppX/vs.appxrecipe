@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-21T10:29:39.294</Modified>
+      <Modified>2022-05-21T11:55:46.914</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\WeatherApp.exe">
       <PackagePath>entrypoint\WeatherApp.exe</PackagePath>
-      <Modified>2022-05-21T10:29:38.307</Modified>
+      <Modified>2022-05-21T11:55:45.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -126,19 +126,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\WeatherApp.xr.xml">
       <PackagePath>WeatherApp.xr.xml</PackagePath>
-      <Modified>2022-05-21T09:57:22.993</Modified>
+      <Modified>2022-05-21T11:55:26.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-21T10:29:38.216</Modified>
+      <Modified>2022-05-21T11:55:45.397</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\Pages\CityHistoryPage.xbf">
       <PackagePath>Pages\CityHistoryPage.xbf</PackagePath>
-      <Modified>2022-05-21T10:29:38.217</Modified>
+      <Modified>2022-05-21T11:55:45.397</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\Pages\MainPage.xbf">
       <PackagePath>Pages\MainPage.xbf</PackagePath>
-      <Modified>2022-05-21T10:29:38.217</Modified>
+      <Modified>2022-05-21T11:55:45.398</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -146,11 +146,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-21T09:51:37.401</Modified>
+      <Modified>2022-05-21T11:55:46.125</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x86\Debug\Core\WeatherApp.exe">
       <PackagePath>WeatherApp.exe</PackagePath>
-      <Modified>2022-05-21T10:29:39.280</Modified>
+      <Modified>2022-05-21T11:55:46.893</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

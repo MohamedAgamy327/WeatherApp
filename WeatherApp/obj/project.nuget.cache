@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "4nIPZN1C1AV9ieL2OGMpWGDxRt5WToWKWBIzVHuR3ypgqBuHexXfj4f+gXpoBEIdUJASu745cmFxcX+Q5mCXaA==",
+  "dgSpecHash": "b5spyxYIK2m5rSTb7O1VeaackZEdSGAUEyDHyG91jLTeXNoTk4JS4J8Z5OoMaE7yOJ0Gx9eg9R/5eNsbd7qcVQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Test\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mohamed Agamy\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.11-rel-30601-02\\microsoft.net.native.compiler.2.2.11-rel-30601-02.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.13\\microsoft.net.uwpcoreruntimesdk.2.2.13.nupkg.sha512",
     "C:\\Users\\Mohamed Agamy\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.universalwindowsplatform\\6.2.13\\microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",
+    "C:\\Users\\Mohamed Agamy\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
     "C:\\Users\\Mohamed Agamy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.2.13\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.compiler\\2.2.11-rel-30601-02\\runtime.win10-arm.microsoft.net.native.compiler.2.2.11-rel-30601-02.nupkg.sha512",
