@@ -8,25 +8,42 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <!--<Grid>
         <Button>
             <StackPanel Orientation="Horizontal">
                 <Image Height="20" Source="http://openweathermap.org/img/w/02n.png?appid=f5cb0b965ea1564c50c6f1b74534d823"/>
                 <TextBlock Text="mido"/>
             </StackPanel>
         </Button>
-    </Grid>
+    </Grid>-->
 
-    <!--<StackPanel 
-        x:Name="stack_panel1" 
-        Margin="50" 
-        Orientation="Vertical"
-        Background="AliceBlue"
-        Padding="50"
+    <Grid    Background="#E5E5E5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+
+        <Button Background="#FFFFFF"  Margin="0,20,20,0" HorizontalAlignment="Right" Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Image  Height="16" Source="Assets/Icon_Plus.png"/>
+                <TextBlock    Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="14" Text="Add City"/>
+            </StackPanel>
+        </Button>
+
+
+        <StackPanel 
+            Grid.Row="2"
+        Orientation="Vertical" 
         >
-        <ListView 
-            x:Name="ListView1" 
-            SelectionChanged="ListView1_SelectionChanged"
+        <ListView x:ConnectionId='2' 
+            x:Name="CitiesListView" 
+            
             >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -35,39 +52,49 @@
             </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel 
-                        Orientation="Horizontal" 
-                        Margin="0"
-                        BorderBrush="LightSkyBlue"
-                        BorderThickness="0,0,0,2"
-                        Padding="5,5,5,5"
-                        >
-                        <Image
-                            Source="{Binding Image}"
-                            Margin="10,10,20,10"
-                            />
-                        <StackPanel Orientation="Vertical">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="9*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+
+
+                    
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
                             <TextBlock
-                                Text="{Binding BookName}"
-                                FontWeight="Black"
-                                Margin="0,30,0,0"
-                                FontFamily="Calibri"
-                                FontSize="17"
+                                Text="{Binding Name}"
+                                Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
                                 />
                             <TextBlock
-                                Text="{Binding Author}"
-                                FontStyle="Italic"
+                                Text=","
+                                   Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
                                 />
-                            <TextBlock
-                                Text="{Binding Price}"
-                                Foreground="Crimson"
+                                <TextBlock
+                                Text="{Binding Country}"
+                                    Foreground="#2388C7"         
+                                FontWeight="Bold"
+                                FontFamily="Lato-Heavy"
+                                FontSize="18"
                                 />
-                        </StackPanel>
-                    </StackPanel>
-                </DataTemplate>
+
+                            </StackPanel>
+
+                            <Image Grid.Column="1" HorizontalAlignment="Left"  Height="20" Source="Assets/Icon_Chevron.png"/>
+
+                        </Grid>
+
+                    </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackPanel>-->
-
+    </StackPanel>
+    </Grid>
 </Page>
 
