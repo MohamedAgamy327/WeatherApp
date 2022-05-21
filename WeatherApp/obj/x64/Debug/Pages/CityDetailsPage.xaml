@@ -3,13 +3,118 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:converters="using:WeatherApp.Helper"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
         DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=CityDetails}">
 
+    <Page.Resources>
+        <converters:StringFormatConverter x:Key="StringFormatConverter" />
+    </Page.Resources>
+
     <Grid    Background="#E5E5E5">
-        <TextBlock Text="City Details" FontSize="40"></TextBlock>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+
+            <Button Grid.Row="0" Margin="20" VerticalAlignment="Center"   Command="{Binding NavigateToMainView}"   Background="#E5E5E5" >
+                <Image    HorizontalAlignment="Left"  Height="20" Source="../Assets/Icon_Back.png"/>
+            </Button>
+
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
+
+            <TextBlock  Margin="0,0,10,0" Text="{Binding CurrentWeather.City}"
+                   FontSize="44"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Bold"></TextBlock>
+            <TextBlock Margin="0,0,10,0" Text="," FontSize="44"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Bold"></TextBlock>
+            <TextBlock  Margin="0,0,10,0" Text="{Binding CurrentWeather.Country}"
+                   FontSize="44"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <Grid Grid.Row="3" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock TextAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"  Text="Description" FontSize="12"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Normal"></TextBlock>
+
+            <TextBlock TextAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Margin="20,0,0,0" Text="{Binding CurrentWeather.Description}" FontSize="18"
+                   Foreground="#2388C7"
+                   FontFamily="Lato-Heavy"
+                   FontWeight="Bold"></TextBlock>
+
+            <TextBlock TextAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"  Text="Temperature" FontSize="12"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Normal"></TextBlock>
+
+            <TextBlock TextAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"  Text="Humidity" FontSize="12"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Normal"></TextBlock>
+
+            <TextBlock TextAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0"  Text="Windspeed" FontSize="12"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Normal"></TextBlock>
+
+
+        </Grid>
+
+
+
+        <StackPanel Grid.Row="4" Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Margin="0,0,2,0" HorizontalTextAlignment="Center" HorizontalAlignment="Center" Text="Weather information for" FontSize="12"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Normal"></TextBlock>
+                <TextBlock HorizontalTextAlignment="Center" HorizontalAlignment="Center" Text="{Binding CurrentWeather.City}" FontSize="12"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Normal"></TextBlock>
+                <TextBlock HorizontalTextAlignment="Center" HorizontalAlignment="Center" Text=" received on" FontSize="12"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Normal"></TextBlock>
+            </StackPanel>
+
+
+            <TextBlock HorizontalTextAlignment="Center" HorizontalAlignment="Center"  Text="{Binding CurrentWeather.Date, Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd.MM.yyy - HH:mm }'}" FontSize="12"
+                   Foreground="#000000"
+                   FontFamily="Lato-Regular"
+                   FontWeight="Normal"></TextBlock>
+        </StackPanel>
+
+
 
     </Grid>
 </Page>

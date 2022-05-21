@@ -93,7 +93,7 @@
                             Orientation="Horizontal" >
 
                             <TextBlock
-                               Text="{Binding Date, Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/MM/yyy HH\\\\:mm (ddd)}'}"
+                               Text="{Binding Date, Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd.MM.yyy - HH:mm }'}"
                                 Foreground="#000000"         
                                 FontWeight="Normal"
                                 FontFamily="Lato-Regular"
