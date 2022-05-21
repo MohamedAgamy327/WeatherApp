@@ -1,12 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="AddCity" />
     <RootPropertyPathName Name="CityDetails" />
     <RootPropertyPathName Name="CityHistory" />
+    <RootPropertyPathName Name="Weathers" />
+    <RootPropertyPathName Name="Date" />
+    <RootPropertyPathName Name="Temperature" />
+    <RootPropertyPathName Name="Description" />
+    <RootPropertyPathName Name="SelectedCity" />
+    <RootPropertyPathName Name="NavigateToMainView" />
     <RootPropertyPathName Name="Main" />
     <RootPropertyPathName Name="Cities" />
-    <RootPropertyPathName Name="SelectedCity" />
     <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="DataContext" />
     <RootPropertyPathName Name="NavigateToHistoryView" />
@@ -23,11 +31,14 @@
       <RootProperty Name="Background" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Source" />
       <RootProperty Name="Path" />
+      <RootProperty Name="Converter" />
+      <RootProperty Name="ConverterParameter" />
       <RootProperty Name="Mode" />
       <RootProperty Name="ElementName" />
     </RootType>
@@ -45,36 +56,29 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="WeatherApp.Pages.AddCityPage" />
     <RootType FullName="WeatherApp.Pages.CityDetailsPage" />
-    <RootType FullName="WeatherApp.Pages.CityHistoryPage" />
+    <RootType FullName="WeatherApp.Helper.StringFormatConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Command" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootProperty Name="CommandParameter" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="SelectionMode" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="SelectedItem" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -87,14 +91,25 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="CommandParameter" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Source" />
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="WeatherApp.Pages.CityHistoryPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="WeatherApp.Pages.MainPage" />
   </Roots.RootTypes>

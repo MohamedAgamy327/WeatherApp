@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helper\StringFormatConverter.cs" />
     <Compile Include="IServices\IWeatherService.cs" />
     <Compile Include="IServices\ICityService.cs" />
     <Compile Include="Pages\AddCityPage.xaml.cs">

@@ -34,15 +34,12 @@
                                 FontSize="44" Text="Cities"/>
 
 
-        <StackPanel 
-            Grid.Row="2"
-        Orientation="Vertical" 
-        >
         <ListView 
             x:Name="CitiesListView" 
             SelectionMode="Single"
             ItemsSource="{Binding Path=Cities}"
            SelectedItem="{ Binding  Path=SelectedCity , Mode=TwoWay}"
+            Grid.Row="2"
             >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -97,6 +94,6 @@
                     </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackPanel>
+
     </Grid>
 </Page>

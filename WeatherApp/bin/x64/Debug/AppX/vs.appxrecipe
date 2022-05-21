@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-21T17:20:32.952</Modified>
+      <Modified>2022-05-21T18:04:23.377</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\WeatherApp.exe">
       <PackagePath>entrypoint\WeatherApp.exe</PackagePath>
-      <Modified>2022-05-21T17:20:32.528</Modified>
+      <Modified>2022-05-21T18:04:22.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mohamed Agamy\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -142,27 +142,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\WeatherApp.xr.xml">
       <PackagePath>WeatherApp.xr.xml</PackagePath>
-      <Modified>2022-05-21T17:19:55.605</Modified>
+      <Modified>2022-05-21T18:04:22.873</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-21T17:20:32.464</Modified>
+      <Modified>2022-05-21T18:04:22.883</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\AddCityPage.xbf">
       <PackagePath>Pages\AddCityPage.xbf</PackagePath>
-      <Modified>2022-05-21T17:20:32.464</Modified>
+      <Modified>2022-05-21T18:04:22.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\CityDetailsPage.xbf">
       <PackagePath>Pages\CityDetailsPage.xbf</PackagePath>
-      <Modified>2022-05-21T17:20:32.464</Modified>
+      <Modified>2022-05-21T18:04:22.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\CityHistoryPage.xbf">
       <PackagePath>Pages\CityHistoryPage.xbf</PackagePath>
-      <Modified>2022-05-21T17:20:32.465</Modified>
+      <Modified>2022-05-21T18:04:22.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\MainPage.xbf">
       <PackagePath>Pages\MainPage.xbf</PackagePath>
-      <Modified>2022-05-21T17:20:32.465</Modified>
+      <Modified>2022-05-21T18:04:22.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -170,11 +170,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-21T17:11:29.856</Modified>
+      <Modified>2022-05-21T18:03:23.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Core\WeatherApp.exe">
       <PackagePath>WeatherApp.exe</PackagePath>
-      <Modified>2022-05-21T17:20:32.947</Modified>
+      <Modified>2022-05-21T18:04:23.371</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
