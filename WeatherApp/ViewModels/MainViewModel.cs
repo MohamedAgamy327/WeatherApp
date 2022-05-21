@@ -18,12 +18,21 @@ namespace WeatherApp.ViewModels
             ICityService cityService)
         {
             _navigationService = navigationService;
-            _cityService = cityService;
+            _cityService = cityService;    
+        }
 
-            var task = _cityService.GetAll();
-            task.Wait();
-            List<City> cities = task.Result;
-            Cities = new ObservableCollection<City>(cities);
+        private RelayCommand _load;
+        public RelayCommand Load
+        {
+            get
+            {
+                return _load
+                    ?? (_load = new RelayCommand(ExecuteLoadAsync));
+            }
+        }
+        private async void ExecuteLoadAsync()
+        {
+            Cities = new ObservableCollection<City>(await _cityService.GetAll() as IEnumerable<City>);
         }
 
         private ObservableCollection<City> _cities;

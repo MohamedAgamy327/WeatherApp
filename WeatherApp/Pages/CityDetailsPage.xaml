@@ -24,10 +24,10 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="3*" />
-            <RowDefinition Height="4*" />
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3.5*" />
+            <RowDefinition Height="3.5*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
@@ -53,6 +53,9 @@
                    FontFamily="Lato-Regular"
                    FontWeight="Bold"></TextBlock>
         </StackPanel>
+
+        <Image Grid.Row="2" Height="102" Width="82"  HorizontalAlignment="Center"   Source="{Binding CurrentWeather.Icon}"/>
+
 
         <Grid Grid.Row="3" >
 
@@ -144,7 +147,6 @@
 
 
         </Grid>
-
 
 
         <StackPanel Grid.Row="5" Orientation="Vertical">

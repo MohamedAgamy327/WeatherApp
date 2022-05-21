@@ -72,3 +72,5 @@ D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Microsoft.Xaml.Interactivit
 D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Microsoft.Xaml.Interactivity.pdb
 D:\Projects\Test\WeatherApp\WeatherApp\obj\x64\Debug\Microsoft.Xaml.Interactions.pri.xml
 D:\Projects\Test\WeatherApp\WeatherApp\obj\x64\Debug\Microsoft.Xaml.Interactivity.pri.xml
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Newtonsoft.Json.dll
+D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Assets\WeatherDB.db

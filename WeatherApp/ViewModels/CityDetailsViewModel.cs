@@ -18,13 +18,6 @@ namespace WeatherApp.ViewModels
         {
             _navigationService = navigationService;
             _weatherService = weatherService;
-
-
-      //      _currentWeather  = await _weatherService.GetCurrent(id).ConfigureAwait(true);
-
-            //var task = _weatherService.GetCurrent(App.City);
-            //task.Wait();
-            //_currentWeather = task.Result;
         }
 
         private Weather _currentWeather;

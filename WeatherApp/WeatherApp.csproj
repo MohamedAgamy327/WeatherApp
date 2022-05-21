@@ -123,6 +123,7 @@
     <Compile Include="Helper\StringFormatConverter.cs" />
     <Compile Include="IServices\IWeatherService.cs" />
     <Compile Include="IServices\ICityService.cs" />
+    <Compile Include="JsonModel\WeatherJson.cs" />
     <Compile Include="Pages\AddCityPage.xaml.cs">
       <DependentUpon>AddCityPage.xaml</DependentUpon>
     </Compile>
@@ -203,6 +204,25 @@
     <PackageReference Include="MvvmLightLibs">
       <Version>5.4.1.1</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015-2019 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs.Desktop, Version=14.0">
+      <Name>Visual C++ 2015-2019 UWP Desktop Runtime for native apps</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\WeatherDB.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

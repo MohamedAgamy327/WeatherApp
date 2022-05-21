@@ -28,13 +28,15 @@ namespace WeatherApp.Services
             }
         };
 
+        //   List<City> cities;
+
         public Task<City> Add()
         {
             throw new NotImplementedException();
         }
-        public Task<List<City>> GetAll()
+        public async Task<List<City>> GetAll()
         {
-            return Task.FromResult(cities);
+            return cities;
         }
     }
 }

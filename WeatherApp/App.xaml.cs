@@ -5,6 +5,8 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Windows.Storage;
+using System.Threading.Tasks;
 
 namespace WeatherApp
 {
@@ -18,8 +20,9 @@ namespace WeatherApp
             Suspending += OnSuspending;
         }
 
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             if (rootFrame == null)
@@ -54,5 +57,7 @@ namespace WeatherApp
             var deferral = e.SuspendingOperation.GetDeferral();
             deferral.Complete();
         }
+
+
     }
 }

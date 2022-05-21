@@ -1,11 +1,14 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using WeatherApp.Helper;
 using WeatherApp.IServices;
+using WeatherApp.JsonModel;
 using WeatherApp.Models;
+using Weather = WeatherApp.Models.Weather;
 
 namespace WeatherApp.Services
 {
@@ -95,18 +98,27 @@ namespace WeatherApp.Services
                     HttpResponseMessage response = await httpClient.GetAsync($"{ConstString.URLCurrentWeather}q={city}&appid={ConstString.apiKey}");
                     HttpContent content = response.Content;
                     var data = await content.ReadAsStringAsync();
+                    var weatherJson = JsonConvert.DeserializeObject<WeatherRoot>(data);
+
+                    return new Weather()
+                    {
+                        City = weatherJson.name,
+                        Country = weatherJson.sys.country,
+                        Description = weatherJson.weather[0].description,
+                        Humidity = weatherJson.main.humidity,
+                        Temperature = Convert.ToDecimal(weatherJson.main.temp) - Convert.ToDecimal(273.15),
+                        Windspeed = Convert.ToDecimal(weatherJson.wind.speed) * Convert.ToDecimal(3.6),
+                        Date=DateTime.Now,
+                        Icon = $"{ConstString.URLIcon}{weatherJson.weather[0].icon}.png?appid={ConstString.apiKey}"
+                    };
+
                 }
                 catch (Exception ex)
                 {
-          
                     throw;
                 }
-                
-                return weathers.OrderByDescending(d => d.Date).FirstOrDefault(d => d.City == city);
             }
 
-
-            //return Task.FromResult(weathers.OrderByDescending(d => d.Date).FirstOrDefault(d => d.City == city));
         }
     }
 }
