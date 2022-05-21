@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
-using WeatherApp.Models;
+﻿
 using Windows.UI.Xaml.Controls;
+
+using System.Windows.Input;
 
 
 namespace WeatherApp.Pages
@@ -10,33 +11,13 @@ namespace WeatherApp.Pages
         public MainPage()
         {
             InitializeComponent();
-
-            List<City> cities = new List<City>();
-
-            cities.Add(new City
-            {
-                Country="UK",
-                Name="London"
-            });
-
-            cities.Add(new City
-            {
-                Country = "FR",
-                Name = "Paris"
-            });
-
-            cities.Add(new City
-            {
-                Country = "AUT",
-                Name = "Vienna"
-            });
-
-            CitiesListView.ItemsSource = cities;
         }
 
-        //private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        //private void MyListView_MouseDown(object sender, MouseButtonEventArgs e)
         //{
-        //    Frame.Navigate(typeof(CityHistoryPage), e.OriginalSource as Frame);
+        //    HitTestResult r = VisualTreeHelper.HitTest(this, e.GetPosition(this));
+        //    if (r.VisualHit.GetType() != typeof(ListBoxItem))
+        //        listView1.UnselectAll();
         //}
     }
 

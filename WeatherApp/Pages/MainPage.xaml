@@ -15,16 +15,10 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*"/>
             <RowDefinition Height="8*"/>
-            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="3"   Foreground="#2388C7"         
-                                FontWeight="Bold"
-                                FontFamily="Lato-Heavy"
-                                FontSize="14" Text="{Binding SelectedFeedItem}"/>
 
-
-        <Button Command="{Binding NavigateToView}" CommandParameter="History" Background="#FFFFFF"  Margin="0,20,30,0" HorizontalAlignment="Right" Grid.Row="0">
+        <Button Command="{Binding NavigateToAddView}"  Background="#FFFFFF"  Margin="0,20,30,0" HorizontalAlignment="Right" Grid.Row="0">
             <StackPanel Orientation="Horizontal">
                 <Image  Height="16" Source="../Assets/Icon_Plus.png" Margin="0,0,10,0"/>
                 <TextBlock    Foreground="#2388C7"         
@@ -46,12 +40,15 @@
         >
         <ListView 
             x:Name="CitiesListView" 
-            
+            SelectionMode="Single"
+            ItemsSource="{Binding Path=Cities}"
+           SelectedItem="{ Binding  Path=SelectedCity , Mode=TwoWay}"
             >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                </Style>
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+
+                    </Style>
             </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -64,10 +61,11 @@
                             </Grid.ColumnDefinitions>
 
 
-                    
-                        <StackPanel 
-                            Orientation="Horizontal" Grid.Column="0">
-                            <TextBlock
+                            <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Grid.Column="0" CommandParameter="{Binding Name }"  Command="{Binding Path=DataContext.NavigateToDetailsView ,  ElementName=CitiesListView}"   Background="#E5E5E5">
+                            <StackPanel 
+                            Orientation="Horizontal" >
+
+                                <TextBlock
                                 Text="{Binding Name}"
                                 Foreground="#2388C7"         
                                 FontWeight="Bold"
@@ -90,7 +88,8 @@
                                 />
 
                             </StackPanel>
-                            <Button  Command="{Binding Path=DataContext.NavigateToView ,  ElementName=CitiesListView}" CommandParameter="History"  Background="#E5E5E5" Grid.Column="1">
+                            </Button>
+                            <Button CommandParameter="{Binding Name }"  Command="{Binding Path=DataContext.NavigateToHistoryView ,  ElementName=CitiesListView}"   Background="#E5E5E5" Grid.Column="1">
                             <Image    HorizontalAlignment="Left"  Height="20" Source="../Assets/Icon_Chevron.png"/>
                             </Button>
                         </Grid>

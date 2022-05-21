@@ -112,6 +112,12 @@
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\AddCityPage.xbf">
+      <PackagePath>Pages\AddCityPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\CityDetailsPage.xbf">
+      <PackagePath>Pages\CityDetailsPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Test\WeatherApp\WeatherApp\bin\x64\Debug\Pages\CityHistoryPage.xbf">
       <PackagePath>Pages\CityHistoryPage.xbf</PackagePath>
     </AppxPackagedFile>

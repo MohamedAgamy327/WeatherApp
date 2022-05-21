@@ -119,6 +119,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IServices\IWeatherService.cs" />
+    <Compile Include="IServices\ICityService.cs" />
+    <Compile Include="Pages\AddCityPage.xaml.cs">
+      <DependentUpon>AddCityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CityDetailsPage.xaml.cs">
+      <DependentUpon>CityDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CityHistoryPage.xaml.cs">
       <DependentUpon>CityHistoryPage.xaml</DependentUpon>
     </Compile>
@@ -128,6 +136,10 @@
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\WeatherService.cs" />
+    <Compile Include="Services\CityService.cs" />
+    <Compile Include="ViewModels\AddCityViewModel.cs" />
+    <Compile Include="ViewModels\CityDetailsViewModel.cs" />
     <Compile Include="ViewModels\CityHistoryViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
@@ -162,6 +174,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\AddCityPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CityDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\CityHistoryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

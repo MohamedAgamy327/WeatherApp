@@ -1,51 +1,88 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using WeatherApp.IServices;
+using WeatherApp.Models;
 
 namespace WeatherApp.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
         private readonly INavigationService _navigationService;
-        public MainViewModel(INavigationService navigationService)
+        private readonly ICityService _cityService;
+
+        public MainViewModel(
+            INavigationService navigationService,
+            ICityService cityService)
         {
             _navigationService = navigationService;
-            SelectedFeedItem = "Mido";
+            _cityService = cityService;
+
+            var task = _cityService.GetAll();
+            task.Wait();
+            List<City> cities = task.Result;
+            Cities = new ObservableCollection<City>(cities);
         }
 
-        private string _selectedFeedItem;
-
-        public string SelectedFeedItem
+        private ObservableCollection<City> _cities;
+        public ObservableCollection<City> Cities
         {
-            get { return _selectedFeedItem; }
-            set { Set(ref _selectedFeedItem, value); }
+            get { return _cities; }
+            set { Set(ref _cities, value); }
+        }
+
+        private City _selectedCity;
+        public City SelectedCity
+        {
+            get { return _selectedCity; }
+            set { Set(ref _selectedCity, value); }
         }
 
 
-        private RelayCommand<string> _navigateToView;
-        public RelayCommand<string> NavigateToView
+        private RelayCommand _navigateToAddView;
+        public RelayCommand NavigateToAddView
         {
             get
             {
-                return _navigateToView
-                    ?? (_navigateToView = new RelayCommand<string>(NavigateToViewMethodAsync));
+                return _navigateToAddView
+                    ?? (_navigateToAddView = new RelayCommand(NavigateToAddViewMethod));
             }
         }
-        private void NavigateToViewMethodAsync(string destination)
+        private void NavigateToAddViewMethod()
         {
-            switch (destination)
-            {
-                case "History":
-                    App.city = "ssss";
-                    _navigationService.NavigateTo("CityHistoryPage");
-                    break;
-                case "Details":
-                    _navigationService.NavigateTo("SecondPage");
+            _navigationService.NavigateTo("AddCityPage");
+        }
 
-                    break;
-                default:
-                    break;
+        private RelayCommand<string> _navigateToDetailsView;
+        public RelayCommand<string> NavigateToDetailsView
+        {
+            get
+            {
+                return _navigateToDetailsView
+                    ?? (_navigateToDetailsView = new RelayCommand<string>(NavigateToDetailsViewMethod));
             }
+        }
+        private void NavigateToDetailsViewMethod(string city)
+        {
+            App.City = city;
+            _navigationService.NavigateTo("CityDetailsPage");
+        }
+
+        private RelayCommand<string> _navigateToHistoryView;
+        public RelayCommand<string> NavigateToHistoryView
+        {
+            get
+            {
+                return _navigateToHistoryView
+                    ?? (_navigateToHistoryView = new RelayCommand<string>(NavigateToHistoryViewMethod));
+            }
+        }
+        private void NavigateToHistoryViewMethod(string city)
+        {
+            App.City = city;
+            _navigationService.NavigateTo("CityHistoryPage");
         }
     }
 }

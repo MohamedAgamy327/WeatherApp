@@ -16,8 +16,6 @@ namespace WeatherApp.ViewModels
         public CityHistoryViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
-
-            var x = App.city; 
         }
 
 
